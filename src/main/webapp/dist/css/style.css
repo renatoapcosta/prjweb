@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#colorToggle {
+    margin-top: 10px;
+}
+
+.light-blue-bg {
+    background-color: #add8e6;
+}
+
+.dark-orange-text {
+    color: #ff8c00;
+}
+
+.light-red-bg {
+    background-color: #ffcccb;
+}
+
+.dark-green-text {
+    color: #006400;
+}

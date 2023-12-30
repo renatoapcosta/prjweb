@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID" version="4.0">
+
+
+
+    <welcome-file-list>
+        <welcome-file>/login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>homeServlet</servlet-name>
+        <servlet-class>org.example.HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>homeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sobreServlet</servlet-name>
+        <servlet-class>org.example.SobreServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sobreServlet</servlet-name>
+        <url-pattern>/sobre</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>indexServlet</servlet-name>
+        <servlet-class>org.example.IndexServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>indexServlet</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>autenticadorServlet</servlet-name>
+        <servlet-class>org.example.AutenticadorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>autenticadorServlet</servlet-name>
+        <url-pattern>/autenticar</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>indexFilter</filter-name>
+        <filter-class>org.example.IndexFilter</filter-class>
+        <init-param>
+            <param-name>cors.allowed.origins</param-name>
+            <param-value>*</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>indexFilter</filter-name>
+        <url-pattern>/index</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>SobreFilter</filter-name>
+        <filter-class>org.example.SobreFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SobreFilter</filter-name>
+        <url-pattern>/sobre</url-pattern>
+    </filter-mapping>
+
+</web-app>
